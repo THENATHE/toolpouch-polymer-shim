@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "toolpouch_polymer_compat",
+  "version": "${version}",
+  "name": "Tool Pouch Polymer Compat",
+  "description": "Server-side native-client passthrough and vanilla display fallback for Tool Pouch.",
+  "authors": [
+    "THENATHE"
+  ],
+  "license": "MIT",
+  "environment": "server",
+  "mixins": [
+    "toolpouch_polymer_compat.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "toolpouch": "1.1.10",
+    "polymer-core": ">=0.18.2",
+    "polymer-resource-pack": ">=0.18.2"
+  },
+  "suggests": {
+    "toolpouch_atlas_elytra_compat": "*",
+    "mapstitch_polymer_compat": ">=1.0.1"
+  }
+}

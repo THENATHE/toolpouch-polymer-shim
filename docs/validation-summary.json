@@ -1,0 +1,166 @@
+{
+  "result": "PASS",
+  "runs": [
+    {
+      "label": "stock-unsupported-v3",
+      "result": "PASS unsupported client item synchronization, use and preservation",
+      "assertions": [
+        "slot 0 visible",
+        "vanilla placeholder 0 = minecraft:leather",
+        "placeholder explains client mod requirement 0",
+        "placeholder nested contents use safe item IDs 0",
+        "slot 1 visible",
+        "vanilla placeholder 1 = minecraft:leather",
+        "placeholder explains client mod requirement 1",
+        "placeholder nested contents use safe item IDs 1",
+        "ordinary leggings remain visible",
+        "no custom menu sent to unsupported client",
+        "no Toolpouch screen opened: null",
+        "actual actionbar received: You need the Tool Pouch mod on your client to use this.",
+        "server contents preserved after interaction"
+      ],
+      "test_shim_sha256": {
+        "toolpouch-polymer-compat-1.0.0+26.3.jar": "92e413bc408901e72b487ce517768efea8e3be806919c7138a6e0ce591a60fd6"
+      },
+      "original_toolpouch_sha256": {
+        "toolpouch-fabric-1.1.10+26.3.jar": "a5bb4f084e7d929f3a89cc43317af63bd45abe3e3f4fed8b45f99b2da846e903"
+      },
+      "original_toolpouch_jars_unchanged": true,
+      "launched_mod_copies_unchanged": true
+    },
+    {
+      "label": "stock-native-compass",
+      "result": "PASS native client item synchronization, use and preservation",
+      "assertions": [
+        "slot 0 visible",
+        "native pouch item 0",
+        "native contents synchronized 0",
+        "slot 1 visible",
+        "native pouch item 1",
+        "native contents synchronized 1",
+        "ordinary leggings remain visible",
+        "native client has no missing-mod notice",
+        "native Toolpouch menu opens",
+        "native Toolpouch screen class",
+        "native menu exposes stored compass",
+        "native menu extraction consumed pouch slot",
+        "native menu extraction reached inventory",
+        "native menu reinsertion restored stored item",
+        "native menu edits saved to pouch",
+        "server contents preserved after interaction"
+      ],
+      "test_shim_sha256": {
+        "toolpouch-polymer-compat-1.0.0+26.3.jar": "4f69a66f4a63290ed5c5b61572924f1d81064540346e0ce21e5178715f3b1cfd"
+      },
+      "original_toolpouch_sha256": {
+        "toolpouch-fabric-1.1.10+26.3.jar": "a5bb4f084e7d929f3a89cc43317af63bd45abe3e3f4fed8b45f99b2da846e903"
+      },
+      "original_toolpouch_jars_unchanged": true,
+      "launched_mod_copies_unchanged": true
+    },
+    {
+      "label": "split-native-mixed",
+      "result": "PASS native client item synchronization, use and preservation",
+      "assertions": [
+        "slot 0 visible",
+        "native pouch item 0",
+        "native contents synchronized 0",
+        "nested Atlas independently translated: minecraft:book",
+        "slot 1 visible",
+        "native pouch item 1",
+        "native contents synchronized 1",
+        "nested Atlas independently translated: minecraft:book",
+        "ordinary leggings remain visible",
+        "coexisting Atlas item transmitted",
+        "independent MapStitch capability maps atlas correctly: minecraft:book",
+        "native client has no missing-mod notice",
+        "native Toolpouch menu opens",
+        "native Toolpouch screen class",
+        "native menu exposes stored compass",
+        "native menu extraction consumed pouch slot",
+        "native menu extraction reached inventory",
+        "native menu reinsertion restored stored item",
+        "native menu edits saved to pouch",
+        "server contents preserved after interaction"
+      ],
+      "test_shim_sha256": {
+        "toolpouch-polymer-compat-1.0.0+26.3.jar": "4f69a66f4a63290ed5c5b61572924f1d81064540346e0ce21e5178715f3b1cfd",
+        "toolpouch-atlas-elytra-compat-1.0.0+26.3.jar": "9969d1e8e4debb7e85832137add1fc5f5ae49c2f235469a9f95dacc9e3bc7be6",
+        "mapstitch-polymer-compat-1.0.1+26.3.jar": "ce6a6a1581bc5531bc9c0d8ec653ef48f993265bc7769e177cfc2933aeaa3d27"
+      },
+      "original_toolpouch_sha256": {
+        "toolpouch-fabric-1.1.10+26.3.jar": "a5bb4f084e7d929f3a89cc43317af63bd45abe3e3f4fed8b45f99b2da846e903"
+      },
+      "original_toolpouch_jars_unchanged": true,
+      "launched_mod_copies_unchanged": true
+    },
+    {
+      "label": "split-true-vanilla",
+      "result": "PASS unmodified vanilla joined and received seeded inventories; PASS server real pouch IDs and container data preserved; passive Elytra=false",
+      "assertions": [],
+      "test_shim_sha256": {
+        "toolpouch-polymer-compat-1.0.0+26.3.jar": "4f69a66f4a63290ed5c5b61572924f1d81064540346e0ce21e5178715f3b1cfd",
+        "toolpouch-atlas-elytra-compat-1.0.0+26.3.jar": "9969d1e8e4debb7e85832137add1fc5f5ae49c2f235469a9f95dacc9e3bc7be6",
+        "mapstitch-polymer-compat-1.0.1+26.3.jar": "ce6a6a1581bc5531bc9c0d8ec653ef48f993265bc7769e177cfc2933aeaa3d27"
+      },
+      "original_toolpouch_sha256": {
+        "toolpouch-fabric-1.1.10+26.3.jar": "a5bb4f084e7d929f3a89cc43317af63bd45abe3e3f4fed8b45f99b2da846e903"
+      },
+      "original_toolpouch_jars_unchanged": true,
+      "launched_mod_copies_unchanged": true,
+      "client_mods": [],
+      "screenshot": "runs/split-true-vanilla/vanilla-use.png",
+      "visual_review": "Exact missing-mod actionbar visible, both leather pouches and atlas book visible, no custom menu."
+    },
+    {
+      "label": "combo-mapstitch-only-equipped-final",
+      "result": "PASS unsupported client item synchronization, blocked use, preservation and equipped armor notice",
+      "assertions": [
+        "slot 0 visible",
+        "vanilla placeholder 0 = minecraft:leather",
+        "placeholder explains client mod requirement 0",
+        "placeholder nested contents use safe item IDs 0",
+        "slot 1 visible",
+        "vanilla placeholder 1 = minecraft:leather",
+        "placeholder explains client mod requirement 1",
+        "placeholder nested contents use safe item IDs 1",
+        "ordinary leggings remain visible",
+        "coexisting Atlas item transmitted",
+        "independent MapStitch capability maps atlas correctly: mapstitch:atlas",
+        "no custom menu sent to unsupported client",
+        "no Toolpouch screen opened: null",
+        "actual actionbar received: You need the Tool Pouch mod on your client to use this.",
+        "server contents preserved after interaction",
+        "armor notice while both hands empty",
+        "attached pouch leggings equipped",
+        "attached armor passive notice: You need the Tool Pouch mod on your client to use this."
+      ],
+      "test_shim_sha256": {
+        "toolpouch-polymer-compat-1.0.0+26.3.jar": "4f69a66f4a63290ed5c5b61572924f1d81064540346e0ce21e5178715f3b1cfd",
+        "mapstitch-polymer-compat-1.0.1+26.3.jar": "ce6a6a1581bc5531bc9c0d8ec653ef48f993265bc7769e177cfc2933aeaa3d27"
+      },
+      "original_toolpouch_sha256": {
+        "toolpouch-fabric-1.1.10+26.3-mapstitch-elytra-combo.1.jar": "5d08fc016930e9c2e018ab4f84104204096b05727b1990946856b4ee2ceab0a2"
+      },
+      "original_toolpouch_jars_unchanged": true,
+      "launched_mod_copies_unchanged": true
+    },
+    {
+      "label": "resource-pack-final",
+      "result": "PASS generated pack ZIP integrity, pouch item/model JSONs, 4 original textures and license",
+      "assertions": [],
+      "test_shim_sha256": {
+        "toolpouch-polymer-compat-1.0.0+26.3.jar": "4f69a66f4a63290ed5c5b61572924f1d81064540346e0ce21e5178715f3b1cfd"
+      },
+      "original_toolpouch_sha256": {
+        "toolpouch-fabric-1.1.10+26.3.jar": "a5bb4f084e7d929f3a89cc43317af63bd45abe3e3f4fed8b45f99b2da846e903"
+      },
+      "original_toolpouch_jars_unchanged": true,
+      "launched_mod_copies_unchanged": true
+    }
+  ],
+  "notes": [
+    "Initial failures were sandbox socket restrictions and corrected fixture assumptions: container visibility, pause screen, disallowed diamond pickaxe, independently native nested Atlas.",
+    "No production source or original JAR was edited."
+  ]
+}

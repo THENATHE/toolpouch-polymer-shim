@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "package": "com.thenathe.toolpouchcompat.mixin",
+  "plugin": "com.thenathe.toolpouchcompat.PolymerCompatMixinPlugin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "MapstitchSchedulingBridgeMixin",
+    "MapstitchWireBridgeMixin",
+    "NativeComponentsMixin",
+    "NativeRegistrySyncMixin",
+    "NativeTagsMixin",
+    "PolymerNativeRegistryMixin",
+    "RegistryPacketDecoderMixin",
+    "RegistryPacketEncoderMixin",
+    "RegistrySyncSchedulingMixin",
+    "RegistryWireIdsMixin",
+    "ToolpouchInitializationMixin",
+    "ToolpouchNetworkingMixin",
+    "ToolpouchUseMixin",
+    "ToolpouchGameplayMixin",
+    "ToolpouchUnequipMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
