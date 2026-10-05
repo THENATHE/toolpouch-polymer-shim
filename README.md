@@ -1,3 +1,7 @@
+> **Archived on 2026-10-04.** Future combined Minecraft 26.3 development continues in [Vanilla++ Quality of Life Suite](https://github.com/THENATHE/vanilla-plusplus-quality-of-life-suite). Existing standalone releases and source remain available here.
+>
+> The suite incorporates this component. Existing standalone installations remain a separate option; follow the suite installation instructions when migrating.
+
 # Tool Pouch Polymer Shim
 
 An **unofficial server-side Polymer compatibility shim** for [Tool Pouch](https://github.com/pajicadvance/toolpouch). Players with the mod retain native items, menus, and gameplay. Players without it can join the same server and see safe pouch placeholders with an install notice, without using the pouch interface or its automatic contents lookup.
